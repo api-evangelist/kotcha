@@ -1,9 +1,17 @@
 aid: kotcha
 name: Kotcha
-description: 'Kotcha is a company surfaced as a portfolio company of serena and added to the API Evangelist
-  network as a stub for enrichment. Sector: sporttech. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Kotcha is a consumer running-coaching mobile application operated by PACEUP SAS, a French
+  company based in Paris, and co-founded with marathon world-record holder Eliud Kipchoge and the NN
+  Running Team. The app generates personalized, adaptive training plans for 5K, 10K, half-marathon and
+  marathon distances, delivered through a conversational AI coach that adapts to completed workouts, and
+  it imports activity and health data from Strava, Garmin Connect, Apple, Coros and Huawei wearables.
+  Kotcha raised EUR 3.5M in October 2025 in a round led by Racine2, operated by Serena and makesense.
+  Kotcha is a consumer subscription product distributed through the Apple App Store and Google Play; it
+  publishes no developer portal, no API documentation and no machine-readable API contract, and its
+  terms of service explicitly prohibit automated access to the service. This profile records that
+  absence rather than an API surface.'
 url: https://raw.githubusercontent.com/api-evangelist/kotcha/refs/heads/main/apis.yml
+image: https://www.kotcha.com/favicon.png
 x-type: company
 x-source: serena-portfolio
 x-tier: stub
@@ -14,6 +22,14 @@ modified: '2026-08-17'
 tags:
 - Company
 - Sporttech
+- Running
+- Fitness
+- Health
+- Coaching
+- Artificial Intelligence
+- Mobile Application
+- Wearables
+- Consumer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +37,51 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/kotcha-domain-security.yml
 - type: Website
   url: https://www.kotcha.com/
+- type: Support
+  url: mailto:support@kotcha.com
+- type: TermsOfService
+  url: https://www.kotcha.com/en/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.kotcha.com/en/privacy-policy
+- type: About
+  url: https://www.kotcha.com/en/our-story
+- type: Partners
+  url: https://www.kotcha.com/en/partnership
+- type: Press
+  url: https://drive.google.com/drive/folders/1_Dc4bCirc8qc6YDSHdYUAtXXvk1evLI8
+- type: Downloads
+  url: https://kotcha.go.link/1VEPz
+- type: LinkedIn
+  url: https://www.linkedin.com/company/kotcha-running
+- type: Instagram
+  url: https://www.instagram.com/kotcha.run/
+- type: Facebook
+  url: https://www.facebook.com/people/Kotcha/61580625827349/
+- type: LLMsTxt
+  url: llms/kotcha-llms.txt
+- type: Plans
+  url: plans/kotcha-plans-pricing.yml
+x-enrichment:
+  date: '2026-08-17'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: Kotcha is a consumer iOS/Android running-coach subscription from PACEUP SAS with no developer
+    program at all — the marketing site has no /docs, /developers or /api route, api.kotcha.com and
+    developer.kotcha.com are NXDOMAIN, and its Terms & Conditions section 6 explicitly prohibit
+    "accessing services through unauthorized means or automated methods".
+  evidence:
+  - url: https://www.kotcha.com/openapi.json
+    status: 404
+  - url: https://www.kotcha.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.kotcha.com/en/terms-and-conditions
+    status: 200
+  checked: '2026-08-17'

@@ -1,0 +1,42 @@
+# Kotcha
+
+> Kotcha is a consumer running-coaching mobile application operated by PACEUP SAS (Paris, France),
+> co-founded with marathon world-record holder Eliud Kipchoge and the NN Running Team. It generates
+> personalized, adaptive training plans for 5K, 10K, half-marathon and marathon distances through a
+> conversational AI coach, and imports activity and health data from Strava, Garmin Connect, Apple,
+> Coros and Huawei devices. Kotcha publishes NO public API, NO developer portal and NO
+> machine-readable API contract; it is distributed as an iOS/Android subscription app.
+
+## Status
+
+- No API: Kotcha declares no API in this profile. As of 2026-08-17 there is no developer portal, no
+  API reference, no OpenAPI/AsyncAPI/GraphQL contract, no MCP server and no A2A agent card. Kotcha is
+  an API *consumer* (Garmin Connect, Strava, Apple Health) rather than an API producer.
+- Automated access is prohibited: Kotcha's Terms & Conditions forbid "accessing services through
+  unauthorized means or automated methods". Do not attempt to call the mobile application backend.
+- Correction welcome: if Kotcha publishes a developer program, open an issue on this repository and
+  the profile will be re-run and re-scored.
+
+## Company
+
+- [Kotcha](https://www.kotcha.com/): Product site and app download.
+- [Our story](https://www.kotcha.com/en/our-story): Founding story with Eliud Kipchoge and Kilian Jornet.
+- [Partnership, affiliation & ambassador](https://www.kotcha.com/en/partnership): Business/partner contact route.
+- [Press kit](https://drive.google.com/drive/folders/1_Dc4bCirc8qc6YDSHdYUAtXXvk1evLI8): Brand and media assets.
+- [Terms & conditions](https://www.kotcha.com/en/terms-and-conditions): Legal terms, subscriptions, permitted use.
+- [Privacy policy](https://www.kotcha.com/en/privacy-policy): Data controller PACEUP SAS; processors include Supabase, Railway, Intercom.
+- Support: support@kotcha.com — General contact: hi@kotcha.com
+
+## Profile artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/kotcha/refs/heads/main/apis.yml): APIs.json 0.20 profile for Kotcha.
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/kotcha/refs/heads/main/security/kotcha-domain-security.yml): Probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture for kotcha.com.
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/kotcha/refs/heads/main/well-known/kotcha-well-known.yml): Recorded absence of every /.well-known/ discovery document.
+- [Plans](https://raw.githubusercontent.com/api-evangelist/kotcha/refs/heads/main/plans/kotcha-plans-pricing.yml): Recorded absence of any published pricing page.
+
+## Optional
+
+- [LinkedIn](https://www.linkedin.com/company/kotcha-running)
+- [Instagram](https://www.instagram.com/kotcha.run/)
+- [Strava club](https://www.strava.com/clubs/kotcha)
+- [Facebook](https://www.facebook.com/people/Kotcha/61580625827349/)

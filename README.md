@@ -42,6 +42,34 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kotcha is a company surfaced as a portfolio company of serena and added to the API Evangelist network as a stub for enrichment. Sector: sporttech. This profile is a lead awaiting the enrichment pipeline.
+Kotcha is a consumer running-coaching mobile application operated by PACEUP SAS, a French company based
+in Paris, and co-founded with marathon world-record holder Eliud Kipchoge and the NN Running Team. The
+app generates personalized, adaptive training plans for 5K, 10K, half-marathon and marathon distances
+through a conversational AI coach, and imports activity and health data from Strava, Garmin Connect,
+Apple, Coros and Huawei devices. Kotcha raised EUR 3.5M in October 2025 in a round led by Racine², operated
+by Serena and makesense.
+
+## No API surface
+
+As of **2026-08-17**, Kotcha publishes **no public API**. Contract discovery found no developer portal,
+no API reference, no OpenAPI/Swagger/GraphQL/AsyncAPI document, no MCP server and no A2A agent card:
+
+- `www.kotcha.com/openapi.json`, `/openapi.yaml`, `/swagger.json`, `/v1/openapi.json`, `/api-docs`,
+  `/docs`, `/redoc`, `/graphql`, `/llms.txt` — all **404**
+- Every `/.well-known/*` path 307-redirects to `/en/.well-known/*` and returns **404**
+  (see [`well-known/kotcha-well-known.yml`](well-known/kotcha-well-known.yml))
+- `api.kotcha.com`, `app.kotcha.com`, `developer.kotcha.com`, `docs.kotcha.com`,
+  `backend.kotcha.com` — all **NXDOMAIN**
+- No GitHub organization exists at `github.com/kotcha`
+- Kotcha's Terms & Conditions §6 explicitly prohibit *"accessing services through unauthorized means or
+  automated methods"* — the mobile application backend was **not** probed
+
+Kotcha is an API **consumer** (Garmin Connect, Strava, Apple Health) rather than an API producer. This
+profile therefore records a verified absence, captured as `x-coverage: {state: none, reason:
+no-developer-program}` in [`apis.yml`](apis.yml). What *is* recorded here is the company identity, its
+published legal/support surface, a probed domain-security posture, the well-known and pricing absences,
+and a generated `llms.txt`.
+
+**Published a developer program since?** Open an issue and the profile will be re-run and re-scored.
 
 Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://www.kotcha.com/

@@ -1,0 +1,23 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.kotcha.com/en/terms-and-conditions
+plan_count: 0
+plans: []
+note: >-
+  Kotcha publishes no pricing page and no plan table. The marketing site (www.kotcha.com)
+  has no /pricing route and no pricing link in its navigation or footer; the only
+  commercial surface is the "Join us" app-store deep link (https://kotcha.go.link/1VEPz).
+  Section 8 of the Terms & Conditions confirms the product is sold as a consumer
+  subscription with a first-time-user free trial and store-mediated cooling-off periods,
+  but names no tier, price, currency or billing period. Billing is handled by the Apple
+  App Store and Google Play, so the real price list is only visible inside the store
+  listing / in-app paywall, not on any page a machine can read.
+  There is no API, therefore no API plans, quotas or overages to record. No `Pricing`
+  pointer is emitted in apis.yml because no pricing page exists to point at.
+x-evidence:
+- url: https://www.kotcha.com/en/terms-and-conditions
+  status: 200
+  finding: subscriptions and free trial described; no prices published
+- url: https://www.kotcha.com/en
+  status: 200
+  finding: no pricing page in navigation or footer
