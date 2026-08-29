@@ -11,6 +11,17 @@ description: 'Kotcha is a consumer running-coaching mobile application operated 
   terms of service explicitly prohibit automated access to the service. This profile records that
   absence rather than an API surface.'
 url: https://raw.githubusercontent.com/api-evangelist/kotcha/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.kotcha.com/favicon.png
 x-type: company
 x-source: serena-portfolio
