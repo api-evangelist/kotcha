@@ -2,48 +2,13 @@ generated: '2026-08-17'
 method: probed
 source: live GET of /.well-known/* on the only host Kotcha publishes (www.kotcha.com)
 host: https://www.kotcha.com
-note: >-
-  Every /.well-known/ path returned 404. Kotcha runs a Next.js marketing site with i18n
-  middleware that 307-redirects any /.well-known/<path> to /en/.well-known/<path>, which
-  then returns HTTP 404 with the site's HTML error page. No discovery document is served.
-  No API host exists to probe: api.kotcha.com, app.kotcha.com, developer.kotcha.com,
-  docs.kotcha.com and backend.kotcha.com are all NXDOMAIN, and apis.yml declares no APIs,
-  so there is no baseURL or OpenAPI servers[] host to add to this probe.
-  NO WellKnown / SecurityTxt pointer is emitted in apis.yml: this file records a verified
-  ABSENCE, and a pointer would assert that the provider serves a discovery surface it does not.
-documents:
-- path: /.well-known/security.txt
-  status: 404
-  redirect: /en/.well-known/security.txt
-  file: null
-- path: /.well-known/openid-configuration
-  status: 404
-  redirect: /en/.well-known/openid-configuration
-  file: null
-- path: /.well-known/oauth-authorization-server
-  status: 404
-  redirect: /en/.well-known/oauth-authorization-server
-  file: null
-- path: /.well-known/oauth-protected-resource
-  status: 404
-  redirect: /en/.well-known/oauth-protected-resource
-  file: null
-- path: /.well-known/api-catalog
-  status: 404
-  redirect: /en/.well-known/api-catalog
-  file: null
-- path: /.well-known/ai-plugin.json
-  status: 404
-  redirect: /en/.well-known/ai-plugin.json
-  file: null
-- path: /.well-known/agent-card.json
-  status: 404
-  redirect: /en/.well-known/agent-card.json
-  file: null
-- path: /.well-known/agent.json
-  status: 404
-  redirect: /en/.well-known/agent.json
-  file: null
+note: 'Every /.well-known/ path returned 404. Kotcha runs a Next.js marketing site with i18n middleware
+  that 307-redirects any /.well-known/<path> to /en/.well-known/<path>, which then returns HTTP 404 with
+  the site''s HTML error page. No discovery document is served. No API host exists to probe: api.kotcha.com,
+  app.kotcha.com, developer.kotcha.com, docs.kotcha.com and backend.kotcha.com are all NXDOMAIN, and apis.yml
+  declares no APIs, so there is no baseURL or OpenAPI servers[] host to add to this probe. NO WellKnown
+  / SecurityTxt pointer is emitted in apis.yml: this file records a verified ABSENCE, and a pointer would
+  assert that the provider serves a discovery surface it does not.'
 x-evidence:
   fetched: '2026-08-17'
   hosts_probed:
@@ -55,3 +20,27 @@ x-evidence:
   - docs.kotcha.com
   - backend.kotcha.com
   hits: 0
+hosts:
+- host: https://www.kotcha.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
