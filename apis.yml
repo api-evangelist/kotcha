@@ -50,7 +50,7 @@ tags:
 - Health
 - Coaching
 - Artificial Intelligence
-- Mobile Applications
+- Mobile App
 - Wearables
 - Consumer
 tags_raw:
@@ -64,6 +64,7 @@ tags_raw:
 - Mobile Application
 - Wearables
 - Consumer
+- Mobile Applications
 apis: []
 maintainers:
 - FN: Kin Lane
